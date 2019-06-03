@@ -232,31 +232,6 @@ wait = {
     "comment":"Lover Boy is Here",
     "message":"",
 
-
-KAC=[cl,ki,kk,kc,ks,kt,ka,kb,ko,ke,satpam]
-mid = cl.getProfile().mid
-Amid = ki.getProfile().mid
-Bmid = kk.getProfile().mid
-Cmid = kc.getProfile().mid
-Dmid = ks.getProfile().mid
-Emid = kt.getProfile().mid
-Fmid = ka.getProfile().mid
-Gmid = kb.getProfile().mid
-Hmid = ko.getProfile().mid
-Imid = ke.getProfile().mid
-Smid = satpam.getProfile().mid #satpam
-
-protectname = []
-protecturl = []
-protection = []
-autocancel = {}
-autoinvite = []
-autoleaveroom = []
-targets = []
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Smid]
-admin = ["u35577e52b245ace6deb64e33a301f3b0"]
-owner = ["u35577e52b245ace6deb64e33a301f3b0"]
-wait = {
     'contact':False,
     'autoJoin':True,
     'autoCancel':{"on":True, "members":1},
