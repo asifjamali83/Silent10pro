@@ -46,160 +46,192 @@ satpam.login(token='EFZtRPhAAmxdwgz1AAC4./Coef04cSd1Ymaih+V2ADa.Py7G9RqTXNQygWfJ
 print ("login success")
 #reload(sys)
 #sys.setdefaultencoding('utf-8')
+Login Time %s \033[0m\n\n"""%(Bot_startTime))
+#==============================================================================
+oepoll = OEPoll(cl)
+call = cl
+creator = ["u35577e52b245ace6deb64e33a301f3b0"]
+owner = ["u35577e52b245ace6deb64e33a301f3b0"]
+admin = ["u35577e52b245ace6deb64e33a301f3b0"]
+#==============================================================================
+mid = cl.getProfile().mid
+Amid = ki.getProfile().mid
+Bmid = kk.getProfile().mid
+Cmid = kc.getProfile().mid
+Dmid = ks.getProfile().mid
+Emid = kt.getProfile().mid
+Fmid = ka.getProfile().mid
+Gmid = kb.getProfile().mid
+Hmid = ko.getProfile().mid
+Imid = ke.getProfile().mid
+Smid = satpam.getProfile().mid #satpam
+KAC = [cl,ki,kk,kc,ks,kt,ka,kb,ko,ke,satpam]
+ABC = [cl,ki,kk,kc,ks,kt,ka,kb,ko,ke,satpam]
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Smid]
+#===============================================================================
+welcome = []
+targets = []
+lower = []
+protectqr = []
+protectkick = []
+protectjoin = []
+protectinvite = []
+protectcancel = []
+protectantijs = []
+ghost = []
+protectname = []
+botStart = time.time()
+msgditerima = {}
+unsendchat = {}
+msgdikirim = {}
+userTemp = {}
+userKicked = []
+dict = []
+msg_dict = {}
+msg_dict1 = {}
+dt_to_str = {}
+temp_flood = {}
+groupName = {}
+groupImage = {}
+list = []
+ban_list = []
+dhenzaqr = []
+offbot = []
+msg_image={}
+msg_video={}
+msg_sticker={}
+detectUnsend = []
+simisimi = []
+tagmeOpen = codecs.open("tag.json","r","utf-8")
+tagme = json.load(tagmeOpen)
 
-helpMessage= """
-    •◇●☯Menu Bot☯●◇•
-😡😡😡😡😡😡😡😡😡
-||🛠 ʜɢ - ʜᴇʟᴘ ɢʀᴏᴜᴘ
-||🛠 ʜᴀ - ʜᴇʟᴘ ᴀᴅᴍɪɴ
-||🛠 ʜᴋ - ʜᴇʟᴘ ᴋɪᴄᴋᴇʀ
-||🛠 ʜᴘ - ʜᴇʟᴘ ᴘʀᴏᴛᴇᴄᴛ
-||🛠 sᴇᴛ - ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs
-😡😡😡😡😡😡😡😡😡
-    ◇☆●»ֆւՅո ճՓե●☆«◇
- """
+settings = {
+    "autoBlock": False,
+    "autoRead": False,
+    "welcome": False,
+    "leave": False,
+    "mid": False,
+    "replySticker": False,
+    "stickerOn": False,
+    "checkContact": False,
+    "postEndUrl": True,
+    "checkPost": False,
+    "setKey": False,
+    "restartPoint": False,
+    "checkSticker": False,
+    "userMentioned": False,
+    "listSticker": False,
+    "messageSticker": False,
+    "changeGroupPicture": [],
+    "keyCommand": "",    
+    "unsendMessage": False,
+    "Picture":False,
+    "group":{},
+    "groupPicture":False,
+    "changePicture":False,
+    "changeProfileVideo": False,
+    "ChangeVideoProfilevid":{},
+    "ChangeVideoProfilePicture":{},
+    "autoJoinTicket":False,
+    "SpamInvite":False,
+    "displayName": "",
+    "userAgent": [
+        "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
+        "Mozilla/5.0 (X11; U; Linux amd64; en-US; rv:5.0) Gecko/20110619 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 FirePHP/0.5",
+        "Mozilla/5.0 (X11; Linux x86_64; rv:5.0) Gecko/20100101 Firefox/5.0 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux x86_64) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux ppc; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (X11; Linux AMD64) Gecko Firefox/5.0",
+        "Mozilla/5.0 (X11; FreeBSD amd64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20110619 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1.1; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.2; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.1; U; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.1; rv:2.0.1) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.0; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 5.0; rv:5.0) Gecko/20100101 Firefox/5.0",
+        "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.200.32.99 Safari/537.36"
+    ]
+}
 
-hgMessage ="""
-•○●☯Help Group☯●○•                          
- 😡😡😡😡 😡😡😡😡😡                                                                                                                           
-╠❂͜͡➣ Comment:[text]
-╠❂͜͡➣ Group name:[text]️
-╠❂͜͡➣ Admin on @[name]
-╠❂͜͡➣ Expel on @[name]
-╠❂͜͡➣ Expelall
-╠❂͜͡➣ Steal name    @[name]
-╠❂͜͡➣ Steal Bio     @[name]
-╠❂͜͡➣ Steal status  @[name]
-╠❂͜͡➣ Steal mid     @[name]
-╠❂͜͡➣ Steal contact @[name]
-╠❂͜͡➣ Steal cover   @[name]
-╠❂͜͡➣ Steal pict    @[name]
-╠❂͜͡➣ Steal group pict
-╠❂͜͡➣ Mimic target @[name]
-╠❂͜͡➣ Mimic untarget @[name]
-╠❂͜͡➣ Mimic on
-╠❂͜͡➣ Midpict:[mid]
-╠❂͜͡➣ Copy @[name]
-╠❂͜͡➣ gift1-15
-╠❂͜͡➣ Spam gift
-╠❂͜͡➣ Mimic list
-╠❂͜͡➣ Spamg[on/off][no][txt]
-╠❂͜͡➣ Spam add:[text]
-╠❂͜͡➣ Spam change:[text]
-╠❂͜͡➣ Spam start:[number]
-╠❂͜͡➣ Me
-╠❂͜͡➣ Spam @[name]
-╠❂͜͡➣ Mention all
-╠❂͜͡➣ Lyric [][]
-╠❂͜͡➣ Music [][]
-╠❂͜͡➣ Wiki [text]
-╠❂͜͡➣ Vidio [text]
-╠❂͜͡➣ Youtube [text]
-╠❂͜͡➣ Instagram [text]
-╠❂͜͡➣ Translate-eng [text]
-╠❂͜͡➣ Translate-thai [text]
-╠❂͜͡➣ Time
-╠❂͜͡➣ Speed
-╠❂͜͡➣ Debug speed
-╠❂͜͡➣ Creator
-╠❂͜͡➣ Owner
-╠❂͜͡➣ Responsename
-╠❂͜͡➣ Help
-╠❂͜͡➣ Cek
-╠❂͜͡➣ Ciduk
-╠❂͜͡➣ Setlastpoint
-╠❂͜͡➣ Viewlastseen
-╠❂͜͡➣ Remove chat
-╠❂͜͡➣ Details grup:
-😡😡😡😡😡😡😡😡😡
-      ◇☆●»ֆւՅո ճՓե●☆«◇
-"""
+wait = {
+    "limit": 100,
+    "owner":{},
+    "admin":{},
+    "addadmin":False,
+    "delladmin":False,
+    "staff":{},
+    "dhenza":{},
+    "likeOn": True,
+    "Timeline": True,
+    "addstaff":False,
+    "dellstaff":False,
+    "bots":{},
+    "addbots":False,
+    "dellbots":False,
+    "blacklist":{},
+    "wblacklist":False,
+    "dblacklist":False,
+    "Talkblacklist":{},
+    "Talkwblacklist":False,
+    "Talkdblacklist":False,
+    "talkban":True,
+    "contact":False,
+    'autoJoin':True,
+    'autoAdd':True,
+    'autoCancel':{"on":True, "members":100},
+    'autoLeave':False,
+    'autoLeave1':False,
+    "detectMention":False,
+    "Mentionkick":False,
+    "welcomeOn":False,
+    "sticker":False,
+    "unsend":True,
+    "selfbot":True,
+    "AddstickerTag": {
+        "sid": "",
+        "spkg": "",
+        "status": False
+            },
+    "Addsticker":{
+            "name": "",
+            "status":False
+            },
+    "stk":{},
+    "selfbot":True,
+    "Images":{},
+    "Img":{},
+    "Addimage":{
+            "name": "",
+            "status":False
+            },
+    "Videos":{},
+    "Addaudio":{
+            "name": "",
+            "status":False
+            },
+    "Addvideo":{
+            "name": "",
+            "status":False
+            },
+    "myProfile": {
+            "displayName": "",
+            "coverId": "",
+            "pictureStatus": "",
+            "statusMessage": ""
+            },
+    "mention":"𝒞𝑜𝓂𝑒 𝑜𝓃, 𝐼'𝓂 𝓅𝑒𝑒𝓀𝒾𝓃𝑔, 𝒟𝑒𝒶𝓇",
+    "Respontag":"ᗯᗩITIᑎG ᖴOᖇ ᗯIᖴI ᔕIᑎGᑎᗩᒪᔕ..",
+    "welcome":"Wellcome to my Fams",
+    "comment":"Lover Boy is Here",
+    "message":"",
 
-hpMessage = """
-     🛠🛠Help Protect🛠🛠
- 😡😡😡😡😡😡😡😡
-╠❂͜͡➣ Turn off bots
-╠❂͜͡➣ Bot restart
-╠❂͜͡➣ Backup:on/off
-╠❂͜͡➣ Protect:low
-╠❂͜͡➣ Protect:hight
-╠❂͜͡➣ Protect on
-╠❂͜͡➣ Cancl on
-╠❂͜͡➣ Qr on
-╠❂͜͡➣ Joinn on
-╠❂͜͡➣ Auto blockqr:on/off
-╠❂͜͡➣ Blockinvite:on/off
-╠❂͜͡➣ Auto notice:on/off
-😡😡😡😡😡😡😡😡😡😡
-    ◇☆●»ֆւՅո ճՓե●☆«◇
-"""
-
-haMessage ="""
- ️    🛠🛠Help Admin🛠🛠
- 😡😡😡😡😡😡😡😡😡😡
-╠❂͜͡➣ Ban    @[name]
-╠❂͜͡➣ Unban  @[name]
-╠❂͜͡➣ Ban group:
-╠❂͜͡➣ Del ban:
-╠❂͜͡➣ List ban group
-╠❂͜͡➣ Banned[send contact]
-╠❂͜͡➣ Unbanned[send contact]
-╠❂͜͡➣ Ban repeat @[name]
-╠❂͜͡➣ Blacklist all
-╠❂͜͡➣ Ban cek
-╠❂͜͡➣ Clear banlist
-╠❂͜͡➣ Add friend @[name]
-╠❂͜͡➣ Target @[name]
-╠❂͜͡➣ Del target @[name]
-╠❂͜͡➣ Target list
-╠❂͜͡➣ Invite:[mid]
-╠❂͜͡➣ Invite user[contact]
-╠❂͜͡➣ Invite me
-╠❂͜͡➣ Kuy
-╠❂͜͡➣ Join group
-╠❂͜͡➣ Masuk
-╠❂͜͡➣ Pulang
-╠❂͜͡➣ Bye
-╠❂͜͡➣ Keluar [own]
-╠❂͜͡➣ Leave group:️
-╠❂͜͡➣ Auto join:on/off
-╠❂͜͡➣ Auto leave:on/off
-╠❂͜͡➣ Group list
-╠❂͜͡➣ Banlist
-╠❂͜͡➣ Admin list
-╠❂͜͡➣ Set
-╠❂͜͡➣ Auto add:on/off
-╠❂͜͡➣ Comment:on/off
-╠❂͜͡➣ Gcancel:[number]
-╠❂͜͡➣ Pm cast   [text]
-╠❂͜͡➣ Broadcast [text]
-╠❂͜͡➣ Kembali ke asli
-😡😡😡😡😡😡😡😡😡😡
-      ◇☆●»ֆւՅո ճՓե●☆«◇
-"""
-
-hkMessage ="""
-    🛠🛠Help Kickers🛠🛠
- 😡😡😡😡😡😡😡😡😡
-╠❂͜͡➣ Rejectall
-╠❂͜͡➣ Clean invites
-╠❂͜͡➣ Clear invites
-╠❂͜͡➣ Mulai
-╠❂͜͡➣ Bubar️
-╠❂͜͡➣ Tampol @
-╠❂͜͡➣ Boom @
-╠❂͜͡➣ Anu @
-╠❂͜͡➣ Nk @
-╠❂͜͡➣ Crash
-╠❂͜͡➣ Vkick @
-╠❂͜͡➣ Kick:[mid]
-╠❂͜͡➣ Link open
-╠❂͜͡➣ Link close
-╠❂͜͡➣ Gurl
-╠❂͜͡➣ Recover
-😡😡😡😡😡😡😡😡😡
-     ◇☆●»ֆւՅո ճՓե●☆«◇
-"""
 
 KAC=[cl,ki,kk,kc,ks,kt,ka,kb,ko,ke,satpam]
 mid = cl.getProfile().mid
