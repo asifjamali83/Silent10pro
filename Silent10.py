@@ -43,9 +43,9 @@ satpam = LINETCR.LINE() #satpam
 satpam.login(token='EFZtRPhAAmxdwgz1AAC4./Coef04cSd1Ymaih+V2ADa.Py7G9RqTXNQygWfJJX6vga0YCFzaa0D5WAMG8/1FWes=')
 
 
-print "login success"
-reload(sys)
-sys.setdefaultencoding('utf-8')
+print ("login success")
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
 helpMessage= """
     •◇●☯Menu Bot☯●◇•
