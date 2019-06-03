@@ -9,38 +9,38 @@ from gtts import gTTS
 
 
 ke = LINETCR.LINE()
-ke.login(token='111')
+ke.login(token='EFuc5YcJ7JJqTbAZ0hQa.uA70OmZ6xGXhLjifkBHlgG.oZAgZ6VVUswPc0+Kazc1C1wvsAPusJFX6YYn9eUALXM=')
 
 
 ki = LINETCR.LINE()
-ki.login(token='222')
+ki.login(token='EFLxw9sumRWGOKOzWx87.4ciXpOp+ngV1ye23dcM5vW./Wcqb1J9BJEcXrjEEbtR4x+vBOsqpA+1+fqZ/xAKP0I=')
 				 
 kk = LINETCR.LINE()
-kk.login(token='333')
+kk.login(token='EFuzRkr6Lovev2DZuLib.bAXEGo6vXQI0VRhomlb3MW.QC2vU8iyQ6lt+1Q3YFkEVn11PRPd6ChrZpDtMZ9IpvM=')
 
 kc = LINETCR.LINE()
-kc.login(token='444')
+kc.login(token='EF9sJWLCoUfoxPdKuzy9.4vNGKfbDYS0efY/RcqAJMq.iVBnyBMpRSISG0sJiGkjg2feGmR4UOpnwvsN70EP7HQ=')
 
 ks = LINETCR.LINE()
-ks.login(token='555')
+ks.login(token='EFG6zgmRWrsHYhsXRYz9.sq7xakrN1v28/yW8CSq42q.BnZVyBT7+4ztkJz895WuUaGaO3RlbpsG36DOC53U+WA=')
 
 kt = LINETCR.LINE()
-kt.login(token='666')
+kt.login(token='EFImLyxaCW6n1o8zCEn7.t/IdFcgcW7pVEtQdsL6WzW.BC7t8pWN1zwENxAyYA+WPvUL5T2H+sX6Ig13AoGKUJw=')
 
 ka = LINETCR.LINE()
-ka.login(token='777')
+ka.login(token='EFBJR4qnFOPMAXUQC2Fd.JZJ/1Jhb9oyNKqIA+uiyFq.Rr4ydC+G6+bikVCL+4iZWhukvTdDE0BjabZGphdmrAk=')
 
 kb = LINETCR.LINE()
-kb.login(token='888')
+kb.login(token='EF40lMHhHf6b3nU54FV1.f04Z5tIwN8oo0wvkaqNsqq.k1ATLrBmQEhLOKu3kBJS5vOrbYNZDimZbEnxE4T+CQs=')
 
 ko = LINETCR.LINE()
-ko.login(token='999')
+ko.login(token='EF08RMHcvNLk8OS248P2.XhCwJBakhq3WIw4uZqu08G.fsJoC1T2F5hhSFOfUJ/00yKXhy7UjyFW3oCemYZAwG4=')
 				 
 cl = LINETCR.LINE()
-cl.login(token='1010')
+cl.login(token='EF8Z9oa2qBhZHP2f3OC0.nvD/uRjfRoBETK4ZOWhZSa.AtqUkO/fJZCLQtN6VBWxTjQ3Xv8Kdq18o05ab1bKvPM=')
 
 satpam = LINETCR.LINE() #satpam
-satpam.login(token='1111')
+satpam.login(token='EFZtRPhAAmxdwgz1AAC4./Coef04cSd1Ymaih+V2ADa.Py7G9RqTXNQygWfJJX6vga0YCFzaa0D5WAMG8/1FWes=')
 
 
 print "login success"
